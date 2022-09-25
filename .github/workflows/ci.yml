@@ -19,7 +19,7 @@ jobs:
         run: >
           mvn -B verify -DskipTests sonar:sonar
           -Dsonar.projectKey=iwvg-devops-cheng-shenhui
-          -Dsonar.organization=shenHui-Cheng iwvg-devops-cheng-shenhui
+          -Dsonar.organization=iwvg-devops-cheng-shenhui
           -Dsonar.host.url=https://sonarcloud.io
           -Dsonar.login=$SONAR_TOKEN
         env:
