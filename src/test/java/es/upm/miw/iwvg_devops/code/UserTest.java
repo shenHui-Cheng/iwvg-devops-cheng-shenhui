@@ -83,7 +83,7 @@ public class UserTest {
 
     @Test
     public void testInitials(){
-        assertEquals("s.", this.user.initials());
+        assertEquals("s.b", this.user.initials());
     }
 
 }
