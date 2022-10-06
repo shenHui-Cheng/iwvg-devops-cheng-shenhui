@@ -60,13 +60,13 @@ public class Fraction {
     }
 
     public boolean isProper(){
-        return this.numerator < this.denominator ? true: false;
+        return this.numerator < this.denominator;
     }
     public boolean isImproper(){
-        return this.numerator > this.denominator ? true: false;
+        return this.numerator > this.denominator;
     }
     public boolean isEquivalent(Fraction f1, Fraction f2){
-        return f1.getNumerator() * f2.getDenominator() == f1.getDenominator() * f2.getNumerator() ? true: false;
+        return f1.getNumerator() * f2.getDenominator() == f1.getDenominator() * f2.getNumerator();
     }
 
 

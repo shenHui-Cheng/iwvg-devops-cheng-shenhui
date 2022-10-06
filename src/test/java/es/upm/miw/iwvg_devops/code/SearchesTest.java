@@ -9,11 +9,11 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class SearchesTest {
+class SearchesTest {
     @Test
     void testFindUserIdBySomeProperFraction(){
         List<String> list = Arrays.asList("1","2","3","5");
-        assertTrue(new Searches().findUserIdBySomeProperFraction().collect(Collectors.toList()).equals(list));
+        assertEquals(list,new Searches().findUserIdBySomeProperFraction().collect(Collectors.toList()));
     }
 
     @Test

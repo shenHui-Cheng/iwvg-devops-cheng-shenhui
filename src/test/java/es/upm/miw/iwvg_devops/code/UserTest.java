@@ -8,7 +8,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class UserTest {
+class UserTest {
     private User user;
 
     @BeforeEach
@@ -17,47 +17,47 @@ public class UserTest {
     }
 
     @Test
-    public void testEmpetyConstructorUser(){
+     void testEmpetyConstructorUser(){
         User u2 = new User();
         assertEquals(new ArrayList<>(), u2.getFractions());
     }
 
     @Test
-    public void testGetId(){
+    void testGetId(){
         assertEquals("1234", this.user.getId());
     }
 
     @Test
-    public void testGetName(){
+     void testGetName(){
         assertEquals("shenhui cheng", this.user.getName());
     }
 
     @Test
-    public void testSetName(){
+     void testSetName(){
         String nameTest = "shenhui cheng2";
         this.user.setName(nameTest);
         assertEquals("shenhui cheng2", this.user.getName());
     }
 
     @Test
-    public void testGetFamilyName(){
+    void testGetFamilyName(){
         assertEquals("bella", this.user.getFamilyName());
     }
 
     @Test
-    public void testSetFamilyName(){
+     void testSetFamilyName(){
         String familyName = "bella2";
         this.user.setFamilyName(familyName);
         assertEquals("bella2", this.user.getFamilyName());
     }
 
     @Test
-    public void testGetFractions(){
+     void testGetFractions(){
         assertEquals(new ArrayList(){}, this.user.getFractions());
     }
 
     @Test
-    public void testSetFractions(){
+     void testSetFractions(){
         Fraction frac = new Fraction();
         List<Fraction> fracs = new ArrayList();
         fracs.add(frac);
@@ -66,7 +66,7 @@ public class UserTest {
     }
 
     @Test
-    public void testAddFraction(){
+     void testAddFraction(){
         Fraction frac1 = new Fraction();
         this.user.addFraction(frac1);
         assertEquals(1, this.user.getFractions().size());
@@ -77,12 +77,12 @@ public class UserTest {
     }
 
     @Test
-    public void testFullName(){
+     void testFullName(){
         assertEquals("shenhui cheng bella", this.user.fullName());
     }
 
     @Test
-    public void testInitials(){
+     void testInitials(){
         assertEquals("s.b.", this.user.initials());
     }
 
