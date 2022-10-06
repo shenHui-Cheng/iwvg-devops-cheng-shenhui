@@ -21,4 +21,12 @@ public class Searches {
                 .flatMap(user -> user.getFractions().stream())
                 .map(Fraction::decimal);
     }
-}
+
+    public Stream<String> findUserFamilyNameByUserNameDistinct(String userName) {
+        return new UsersDatabase().findAll()
+                .filter(user -> userName.equals(user.getName()))
+                .map(User::getFamilyName)
+                .distinct();
+    }
+
+    }

@@ -27,4 +27,11 @@ public class SearchesTest {
         Stream<Double> stream = new Searches().findDecimalFractionByUserName("Oscar");
         assertEquals(list,stream.collect(Collectors.toList()));
     }
+
+    @Test
+    void testFindUserFamilyNameByUserNameDistinct() {
+        List list = List.of("Torres");
+        Stream<String> stream = new Searches().findUserFamilyNameByUserNameDistinct("Paula");
+        assertEquals(list, stream.collect(Collectors.toList()));
+    }
 }
