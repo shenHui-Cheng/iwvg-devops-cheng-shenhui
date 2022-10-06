@@ -8,4 +8,11 @@ public class Searches {
                 .filter(user -> user.getFractions().stream().anyMatch(fraction -> fraction.getNumerator()<fraction.getDenominator()))
                 .map(User::getId);
     }
+
+    Stream<String> findUserFamilyNameInitialBySomeProperFraction(){
+        return new UsersDatabase().findAll()
+                .filter(user -> user.getFractions().stream().anyMatch(fraction -> fraction.getNumerator()<fraction.getDenominator()))
+                .map(User::getFamilyName);
+    }
+
 }
