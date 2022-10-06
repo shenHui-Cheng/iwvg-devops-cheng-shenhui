@@ -47,4 +47,21 @@ public class FractionTest {
         assertEquals(0.2, this.fraction.decimal());
     }
 
+    @Test
+    void testIsPoper(){
+        assertEquals(true, this.fraction.isProper());
+    }
+
+    @Test
+    void testIsImproper(){
+        this.fraction.setNumerator(7);
+        assertEquals(true, this.fraction.isImproper());
+    }
+
+    @Test
+    void testIsEquivalent(){
+            Fraction fraction1 = new Fraction(5,6);
+            Fraction fraction2 = new Fraction(50, 60);
+            assertEquals(true, this.fraction.isEquivalent(fraction1,fraction2));
+    }
 }
